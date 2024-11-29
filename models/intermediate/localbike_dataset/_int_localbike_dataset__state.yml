@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: int_localbike_dataset__state
+    description: "This model must contain relevant info about orders aggredated by state"
+    columns:
+      - name: product_id
+        description: "Primary key, unique identifier for each product."
+        tests:
+          - unique
+          - not_null

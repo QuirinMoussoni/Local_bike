@@ -1,0 +1,99 @@
+version: 2
+
+models:
+  - name: stg_localbike_dataset__brands
+    description: "This model must contain relevant info about brand names"
+    columns:
+      - name: brand_id
+        description: "Primary key, unique identifier for each brand."
+        tests:
+            - unique
+            - not_null
+      - name: brand_name
+        description: "brand name, should only contains specific brands names"
+        tests:
+          - accepted_values:
+              name: accepted_values_brand_names
+              values: ['Electra', 'Haro', 'Heller', 'Pure Cycles', 'Ritchey', 'Strider', 'Sun Bicycles', 'Surly', 'Trek']
+        
+  
+  - name: stg_localbike_dataset__categories
+    description: "This model must contain relevant info about category item"
+    columns:
+      - name: category_id
+        description: "Primary key, unique identifier for each category item."
+        tests:
+            - unique
+            - not_null
+      - name: category_name
+        description: "brand name, should only contains specific category names"
+        tests:
+          - accepted_values:
+              name: accepted_values_category_names
+              values: ['Children Bicycles', 'Comfort Bicycles', 'Cruisers Bicycles', 'Cyclocross Bicycles', 'Electric Bikes', 'Mountain Bikes', 'Road Bikes']
+  
+  - name: stg_localbike_dataset__customers
+    description: "This model must contain relevant info about customer detailled information."
+    columns:
+      - name: customer_id
+        description: "Primary key, unique identifier for each customer including first & last name, phone number and address "
+        tests:
+            - unique
+            - not_null
+
+  - name: stg_localbike_dataset__order_items
+    description: "This model must contain relevant info about order items sold."
+    columns:
+      - name: order_id
+        description: "Primary key, unique identifier for each order item including item price, quantities and discount."
+        tests:
+            - unique
+            - not_null
+  
+  - name: stg_localbike_dataset__orders
+    description: "This model must contain relevant info about orders."
+    columns:
+      - name: order_id
+        description: "Primary key, unique identifier for each order including order date creation, ship date and customer id ."
+        tests:
+            - unique
+            - not_null
+  
+  - name: stg_localbike_dataset__products
+    description: "This model must contain relevant info about items/products."
+    columns:
+      - name: product_id
+        description: "Primary key, unique identifier for each  item/product including product name, year of the model and price."
+        tests:
+            - unique
+            - not_null
+  
+  - name: stg_localbike_dataset__staffs
+    description: "This model must contain relevant info about team members."
+    columns:
+      - name: staff_id
+        description: "Primary key, unique identifier for each team member including names, manager id and which store they belong to ."
+        tests:
+            - unique
+            - not_null
+  
+  - name: stg_localbike_dataset__stocks
+    description: "This model must contain relevant info about stocks."
+    columns:
+      - name: stocks_id
+        description: "Primary key, unique identifier for each stocks including store id : concatanation between store_id and staff_id ."
+        tests:
+            - unique
+            - not_null
+  
+  - name: stg_localbike_dataset__stores
+    description: "This model must contain relevant info about stores."
+    columns:
+      - name: store_id
+        tests:
+            - unique
+            - not_null
+ 
+
+ 
+

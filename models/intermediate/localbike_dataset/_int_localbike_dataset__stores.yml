@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: int_localbike_dataset__stores
+    description: "This model must contain relevant info  about orders aggredated by stores"
+    columns:
+      - name: store_id
+        description: "Primary key, unique identifier for each store."
+        tests:
+          - unique
+          - not_null
