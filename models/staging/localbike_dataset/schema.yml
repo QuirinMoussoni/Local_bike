@@ -44,7 +44,7 @@ models:
   - name: stg_localbike_dataset__order_items
     description: "This model must contain relevant info about order items sold."
     columns:
-      - name: order_id
+      - name: order_item_id
         description: "Primary key, unique identifier for each order item including item price, quantities and discount."
         tests:
             - unique

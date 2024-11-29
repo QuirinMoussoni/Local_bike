@@ -2,6 +2,7 @@ SELECT
     order_id,
     product_id,
     item_id,
+    CONCAT(order_id,"_",item_id) as order_item_id,
     quantity,
     list_price,
     discount,
