@@ -4,7 +4,7 @@ models:
   - name: int_localbike_dataset__brand
     description: "This model must contain relevant info about brand names"
     columns:
-      - name: brand_id
+      - name: order_item_id
         description: "Primary key, unique identifier for each brand."
         tests:
           - unique

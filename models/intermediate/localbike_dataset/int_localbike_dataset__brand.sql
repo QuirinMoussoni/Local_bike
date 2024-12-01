@@ -1,6 +1,7 @@
 SELECT 
   oi.order_id,
   oi.product_id,
+  oi.order_item_id,
   p.product_name,
   p.category_id,
   p.brand_id,
