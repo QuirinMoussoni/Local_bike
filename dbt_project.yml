@@ -44,12 +44,12 @@ models:
 
     staging:
       materialized: view
-      sales_database:
+      localbike_dataset:
         schema: stg_localbike_dataset
 
     intermediate:
       materialized: view
-      sales_database: 
+      localbike_dataset: 
         schema: int_localbike_dataset
         
     mart:
