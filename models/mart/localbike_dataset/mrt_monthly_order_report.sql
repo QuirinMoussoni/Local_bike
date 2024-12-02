@@ -9,7 +9,6 @@ SELECT
   t.first_name,
   t.last_name,
   t.manager_id,
-  -- comments
   COUNT(DISTINCT o.order_id) as total_orders,
   ROUND(AVG(o.total_items),0) as avg_item_per_orders,
   ROUND(o.total_items, 0) as total_items,
